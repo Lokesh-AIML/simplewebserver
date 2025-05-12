@@ -36,7 +36,7 @@ Start the server script and check for errors.
 Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
-<html>
+//<html>
 <title> Image map </title>
 <body>
 <table border ="2"  cellspacing ="10" cellpadding = "6" align = "Center"> 
@@ -81,7 +81,6 @@ Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 </table>
 </body>
 </html>
-
 ## OUTPUT:
 
 
