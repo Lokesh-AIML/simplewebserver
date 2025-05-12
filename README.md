@@ -36,62 +36,51 @@ Start the server script and check for errors.
 Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
-from http.server import HTTPServer, BaseHTTPRequestHandler
-content = """
 <html>
-<head>
-<title>Top five software companies in revenue</title>
-</head>
+<title> Image map </title>
 <body>
-<h1 align="center">
-TOP FIVE SOFTWARE COMPANIES IN REVENUE</h1>
-<table align="center" border="2" cellspacing="5" cellpadding="5" width="800" height="500">
+<table border ="2"  cellspacing ="10" cellpadding = "6" align = "Center"> 
+<caption> TOP FIVE REVENUE GENERATING SOFTWARE COMPANIES </caption>
 <tr>
-<th>RANK</th>
-<th>COMPANY NAME</th>
-<th>REVENUE</th>
+<th> S.No </th>
+<th> Company </th>
+<th> Revenue </th>
 </tr>
+
 <tr>
-<td>1</td>
-<td>Apple(AAPL)</td>
-<td>$385.70 B </td>
+<td> 1. </td>
+<td> Microsoft </td>
+<td> 65 Billion  </td>
 </tr>
+
 <tr>
-<td>2</td>
-<td>Alphabet(Google)</td>
-<td>$307.39 B</td>
+<td> 2. </td>
+<td> Oracle </td>
+<td> 29.6 Billion  </td>
 </tr>
+
 <tr>
-<td>3</td>
-<td>Microsoft</td>
-<td>$227.58 B</td>
-</tr>
+<td> 3. </td>
+<td> IBM </td>
+<td> 29.1 Billion  </td>
+</tr> 
+
 <tr>
-<td>4</td>
-<td>Ibm</td>
-<td>$61.85 B</td>
-</tr>
+<td> 4. </td>
+<td> SAP </td>
+<td> 6.4 Billion </td>
+</tr> 
+ 
 <tr>
-<td>5</td>
-<td>Oracle</td>
-<td>$51.62 B</td>
+<td> 5. </td>
+<td> Syamntec </td>
+<td> 5.6 Billion </td>
 </tr>
+
+
 </table>
 </body>
 </html>
-
-"""
-class myhandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("request received")
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charset=utf-8')
-        self.end_headers()
-        self.wfile.write(content.encode())
-server_address = ('',8000)
-httpd = HTTPServer(server_address,myhandler)
-print("my webserver is running...")
-httpd.serve_forever()
 
 ## OUTPUT:
 
